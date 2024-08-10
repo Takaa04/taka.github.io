@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALO SAYANG</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradien warna cinta */
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        #heart {
+            font-size: 10vw; /* Ukuran responsif berdasarkan lebar viewport */
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efek cahaya */
+        }
+
+        #heart:active {
+            transform: scale(1.2);
+        }
+
+        #animation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 5vw; /* Ukuran responsif berdasarkan lebar viewport */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: explode 1.5s ease-out forwards;
+            color: #ff0066; /* Warna hati */
+        }
+
+        @keyframes explode {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(-50% + var(--randX)), calc(-50% + var(--randY))) scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heart" onclick="redirectToSite()">
+        ❤️
+    </div>
+
+    <div id="animation-container"></div>
+
+    <script>
+        function redirectToSite() {
+            const url = "kangen.html"; // Ganti dengan URL tujuan kamu
+            createHearts();
+            setTimeout(() => {
+                window.location.href = url;
+            }, 1500); // Redirect setelah animasi
+        }
+
+        function createHearts() {
+            const container = document.getElementById('animation-container');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                const randX = `${Math.random() * 100 - 50}vw`;
+                const randY = `${Math.random() * 100 - 50}vh`;
+                heart.style.setProperty('--randX', randX);
+                heart.style.setProperty('--randY', randY);
+                heart.textContent = '❤️';
+                container.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 1500);
+            }
+        }
+    </script>
+</body>
+</html>

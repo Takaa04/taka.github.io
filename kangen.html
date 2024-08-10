@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kangenn</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .spacer {
+            height: 200px; /* Tambahkan jarak di bawah konten */
+        }
+
+        .audio-player {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi sayangg tapi udah mantan wkwk!</h1>
+        <p>aku gaperna lagi baik - baik tanpa kamu, hidup aku uda ga bearti banget gaada kamu, gaada lagi bahagiaa semenjak kamu pergi, setiap hari aku pura - pura baik didepan semua orang tapi apa? nyatanya aku hancurr, kamu masi jadi alasan aku buat nolak smwa cwe yang mau dapetin hati aku, aku masi sayangg banget sama kamuu cinta aku juga abiss dikamuu.
+          jujur aku pengen ngulang semuanya lagi
+          aku kangen semuaa tentanng kita tapi
+          aku tau itu mustahil.
+          aku juga gamau ngerusak kebahagiaan
+          kamu sekarangg,aku bakalan nunggu kamu
+          pulang. kalau kamu mau kembali lagi
+          kembalilah apapun versi kamu aku 
+          bakalan terima, cinta aku ke kamu masi
+          sama kaya duluu gaada yang berubaa
+          sampai kapanpun</p>
+        <div class="gallery">
+            <img src="images/1.jpg" alt="Gambar 1">
+            <img src="images/2.jpg" alt="Gambar 2">
+            <img src="images/3.webp" alt="Gambar 3">
+            <img src="images/4.webp" alt="Gambar 4">
+            <img src="images/5.webp" alt="Gambar 5">
+            <img src="images/7.jpg" alt="Gambar 6">
+        </div>
+        <div class="spacer"></div>
+        <div class="audio-player">
+            <audio controls>
+                <source src="sayang.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
